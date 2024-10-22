@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { ScaleFonts } from '../../helper/ScaleFonts';
-import { AppFonts } from '../../helper/AppFonts';
+import { ScaleFonts } from '../../../helper/ScaleFonts';
 
 export const createStyles = colors =>
     StyleSheet.create({
@@ -12,6 +11,6 @@ export const createStyles = colors =>
         },
         text: {
             fontSize: ScaleFonts.SIZE_24,
-            color:colors.secondary,
+            color: colors.secondary,
         }
     }); 
