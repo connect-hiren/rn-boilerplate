@@ -1,5 +1,5 @@
-import { Text, View } from '../../components/Base';
-import React from 'react'
+import { Text } from '../../components/Base';
+import React from 'react';
 import { useTheme } from '@react-navigation/native';
 import { createStyles } from './style';
 
@@ -9,10 +9,11 @@ const HomeScreen = () => {
   const styles = createStyles(colors);
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>HomeScreen</Text>
-    </View>
+    <Text>Home Screen</Text>
   )
 }
 
-export default HomeScreen
+
+
+export default HomeScreen 
+
