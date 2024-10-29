@@ -25,6 +25,7 @@ export const createStyles = colors =>
         startText:{
             color:colors.primary,
             fontSize:ScaleFonts.SIZE_18,
-            fontFamily:AppFonts.FONT_REGULAR
+            fontFamily:AppFonts.FONT_REGULAR,
+            textAlign:'center'
         }
     }); 

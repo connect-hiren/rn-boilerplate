@@ -1,29 +1,31 @@
-import React from 'react'
-import { NavigationContainer } from '@react-navigation/native'
-import { AppNavigator } from './navigator/AppNavigator'
-import { darkColor, lightcolor } from './helper/colors'
-import { Provider } from 'react-redux'
-import store from './redux/store'
-import MainContainer from './container/Maincontainer'
+import React, { useContext } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import MainContainer from './container/Maincontainer';
+import { ThemeProvider, ThemeContext } from './helper/ThemeContext';
+import { AppNavigator } from './navigator/AppNavigator';
+
 
 const App = () => {
-
-  const theme = 'dark'
-
-  if (!theme === 'dark') {
-    mode = { colors: { ...darkColor } };
-  } else {
-    mode = { colors: { ...lightcolor } };
-  }
-
   return (
     <Provider store={store}>
-      <NavigationContainer theme={mode} >
-        <AppNavigator />
-        <MainContainer />
-      </NavigationContainer>
+      <ThemeProvider>
+        <ThemedApp />
+      </ThemeProvider>
     </Provider>
-  )
-}
+  );
+};
 
-export default App
+const ThemedApp = () => {
+  const { themeColors } = useContext(ThemeContext);
+
+  return (
+    <NavigationContainer theme={{ colors: themeColors }}>
+      <AppNavigator />
+      <MainContainer />
+    </NavigationContainer>
+  );
+};
+
+export default App;
