@@ -7,7 +7,7 @@ import Drawer3 from "../screens/DrawerScreens/Drawer3";
 import { useTheme } from "@react-navigation/native";
 import { ScaleFonts } from "../helper/ScaleFonts";
 
-export const DrawerMain = () => {
+const DrawerMain = () => {
   const Drawer = createDrawerNavigator();
 
   const colors = useTheme()
@@ -55,10 +55,7 @@ export const DrawerMain = () => {
   );
 };
 
-// const styles = StyleSheet.create({
-//   drawerStyle: { backgroundColor: '#f9f9f9'},
-//   headerStyle: { backgroundColor: '#6200ee'},
-// });
+export default DrawerMain
 
 const createStyles = colors =>
   StyleSheet.create({
@@ -75,3 +72,4 @@ const createStyles = colors =>
       drawerStyle: { backgroundColor: '#f9f9f9'},
         headerStyle: { backgroundColor: '#6200ee'},
   }); 
+

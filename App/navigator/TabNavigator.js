@@ -19,7 +19,7 @@ const CustomTabBarLabel = ({ focused, title }) => {
     );
 };
 
-const HomeScreen = () => {
+const TabNavigator = () => {
     return (
         <Tab.Navigator
             screenOptions={({ route }) => ({
@@ -42,14 +42,14 @@ const HomeScreen = () => {
 
 
 
-export default HomeScreen;
+export default TabNavigator;
 
 
 
 const styles = StyleSheet.create({
     tabBar: {
-        height: Platform.OS==='ios' ? ScaleSize.SPACING_90 :  ScaleSize.SPACING_50,
-        backgroundColor: '#f8f8f8', 
+        height: Platform.OS === 'ios' ? ScaleSize.SPACING_90 : ScaleSize.SPACING_50,
+        backgroundColor: '#f8f8f8',
     },
     tab: {
         paddingBottom: ScaleSize.SPACING_15,
@@ -57,10 +57,10 @@ const styles = StyleSheet.create({
     },
     tabLabel: {
         fontSize: ScaleFonts.SIZE_16,
-        color: 'black', 
+        color: 'black',
     },
     activeTabLabel: {
         fontWeight: 'bold',
-        fontSize:ScaleFonts.SIZE_18
+        fontSize: ScaleFonts.SIZE_18
     },
 })
